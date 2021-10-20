@@ -16,20 +16,21 @@ function App() {
   },[])
   
   return (
-  <Row xs={2} lg={6}  className="g-4">
-      {data && data.map((element) => (
-        <Col key={"col-"+element.name}>
-          <PersonajeCard
-            key={element.name} 
-            nombre={element.name}
-            img={element.image}
-            genero={element.gender}
-            estado={element.status}
-          />
-        </Col> 
-      ))}  
-
-  </Row>
+  <div className="princ">
+    <Row xs={2} lg={6}  className="g-4">
+        {data && data.map((element) => (
+          <Col key={"col-"+element.name}>
+            <PersonajeCard
+              key={element.name} 
+              nombre={element.name}
+              img={element.image}
+              genero={element.gender}
+              estado={element.status}
+            />
+          </Col> 
+        ))}  
+    </Row>
+  </div>
   );
 }
 
